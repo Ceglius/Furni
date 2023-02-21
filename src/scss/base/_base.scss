@@ -1,0 +1,17 @@
+/*
+  ==== Base ====
+*/
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: var(--ff-main);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+
+  &.locked {
+    overflow: hidden;
+  }
+}

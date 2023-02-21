@@ -1,0 +1,28 @@
+@use "../abstract/vars" as *;
+
+/*
+  ==== Utilities ====
+*/
+
+// Container
+.container {
+  max-width: $containerWidth;
+  margin: 0 auto;
+  
+
+  @media (max-width: $containerWidth) {
+    padding: 0 $containerSidePadding + px;
+  }
+
+  @media (max-width: $breakpoint992) {
+      
+  }
+
+  @media (max-width: $breakpoint768) {
+     
+  }
+
+  @media (max-width: $breakpoint480) {
+    padding: 0 calc($containerSidePadding / 2) + px;
+  }
+}

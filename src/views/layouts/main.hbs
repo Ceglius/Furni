@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+ {{> _head}}
+<body>
+    {{> _header}}
+    <main class="main" role="main">
+        {{#if @partial-block}}
+            {{> @partial-block }}
+        {{/if}}   
+    </main>
+    {{> _footer}}
+</body>
+</html>

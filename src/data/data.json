@@ -1,0 +1,15 @@
+{
+  "foo": "jo jo",
+    "items": [
+      {
+        "stock": 261,
+        "price": "€10.47",
+        "image": "https://loremflickr.com/120/120"
+      },
+      {
+        "stock": 292,
+        "price": "€8.74",
+        "image": "https://loremflickr.com/120/120"
+      }
+    ]
+  }

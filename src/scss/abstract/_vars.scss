@@ -1,0 +1,17 @@
+@use "sass:math";
+
+/*
+  ==== Vars ====
+*/
+
+// Breakpoints
+$containerWidth: 1200 + px;
+$containerPadding: 40;
+$containerSidePadding: math.div($containerPadding, 2);
+$breakpoint1450: 1449.98 + px;
+$breakpoint992: 991.98 + px;
+$breakpoint768: 767.98 + px;
+$breakpoint480: 479.98 + px;
+$burgerBreakpoint: $breakpoint992;
+
+
