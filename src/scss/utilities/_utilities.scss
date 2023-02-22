@@ -6,11 +6,11 @@
 
 // Container
 .container {
-  max-width: $containerWidth;
+  max-width: $containerWidth + px ;
   margin: 0 auto;
   
 
-  @media (max-width: $containerWidth) {
+  @media (max-width: calc($addPadding ) ) {
     padding: 0 $containerSidePadding + px;
   }
 
