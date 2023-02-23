@@ -1,3 +1,6 @@
+@use '../abstract/vars' as *;
+@use '../abstract/mixins' as *;
+
 /*
    ==== Sections ====
 */
@@ -12,4 +15,10 @@
   &__sub-heading {
 
   }
+
+    // .section__hero
+    &__hero {
+      padding-top: rem(90);
+      background-color: var(--green-co);
+    }
 }

@@ -1,4 +1,28 @@
+@use '../abstract/vars' as *;
+@use '../abstract/mixins' as *;
+
 /*
   ==== Hero ====
 */
 
+
+.hero {
+
+  // .hero__item
+  &__item {
+  }
+
+  // .hero__title
+  &__title {
+  }
+
+  // .hero__btns
+  &__btns {
+
+  }
+
+  // .hero__img
+  &__img {
+    
+  }
+}

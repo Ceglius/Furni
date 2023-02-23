@@ -5,9 +5,10 @@
 :root {
   --white-co: #fff;
   --black-co:#000;
-  
-  --burger-color: #F9BF29;
-  --burger-active-color: #F9BF29;
+  --orange-co: #F9BF29;
+  --burger-color: var( --orange-co);
+  --burger-active-color: var( --orange-co);
+  --green-co: #35736e;
 }
 
 

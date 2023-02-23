@@ -6,7 +6,7 @@
 */
 
 .header {
-  background-color: #35736e;
+  background-color: var(--green-co);
 
   &.fixed {
     position: fixed;
@@ -51,6 +51,7 @@
     line-height: rem(16);
     opacity: 0.5;
     transition: opacity 0.5s;
+
     &:after {
       position: absolute;
       content: "";
