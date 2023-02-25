@@ -55,18 +55,18 @@
     &:after {
       position: absolute;
       content: "";
-      left: 0;
+      left: 50%;
       bottom: -10px;
       background: #F9BF29;
       height: rem(5);
-      width: 100%;
-      transform: scale(0);
-      transition: 0.5s transform;
+      width: 0;
+      transform: translateX(-50%);
+      transition: all .3s ease;
     }
     &:hover {
       opacity: 1;
       &:after {
-        transform: scale(1);
+        width: 100%;
       }
     }
   }

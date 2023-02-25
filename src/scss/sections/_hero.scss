@@ -7,7 +7,9 @@
 
 
 .hero {
-
+  padding-top: rem(90);
+  background-color: var(--green-co);
+  
   // .hero__item
   &__item {
   }

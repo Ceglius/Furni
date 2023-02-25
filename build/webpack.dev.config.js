@@ -9,7 +9,9 @@ module.exports = merge(common, {
   output: {
     filename: "[name].bundle.js",
     publicPath: '/',
-    path: path.resolve(__dirname, "../dist")
+    path: path.resolve(__dirname, "../dist"),
+    hotUpdateChunkFilename: 'hot/[id].[hash].hot-update.js',
+    hotUpdateMainFilename: 'hot/[hash].hot-update.json',
   },
 
   mode: "development",
