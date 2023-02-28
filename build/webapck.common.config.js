@@ -26,7 +26,7 @@ const config = {
               partialDirs: [
                 path.join(
                   __dirname,
-                  "./src/views/partials",
+                  "./src/views/page-blocks",
                   "./src/views/layouts"
                 ),
               ],
