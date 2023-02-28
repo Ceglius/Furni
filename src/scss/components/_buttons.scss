@@ -7,21 +7,41 @@
 
 
 .btn {
+  display: inline-block;
   padding: rem(12) rem(35);
   font-weight: var(--fw-medium);
   color: var(--white-co);
   background-color: #2F2F2F;
   font-size: rem(16);
-  border-radius: rem(30);
+  border-radius: rem(30); 
+  line-height: rem(28);
+  @media (max-width: $breakpoint480){
+    font-size: rem(14);
+    line-height: rem(20);
+  }
 
   &--cta {
     background-color: var(--orange-co);
     border: 2px solid var(--orange-co);
     color: var(--black-co);
+    transition: background .3s, border .3s , color .4s;
+
+    &:hover {
+      background-color: darken( #F9BF29, 10);
+      border: 2px solid darken( #F9BF29, 10);
+      color: var(--white-co);
+    }
   }
 
   &--transparent {
     background-color: transparent;
     border: 2px solid rgba(255, 255, 255, 0.29);
+    transition: background .3s, border .3s , color .4s;
+    
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.29);
+      border: 2px solid transparent;
+      color: var(--black-co);
+    }
   }
-}
+} 

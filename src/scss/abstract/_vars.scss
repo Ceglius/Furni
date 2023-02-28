@@ -5,14 +5,13 @@
 */
 
 // Breakpoints
-$containerWidth: 1140 ;
+$containerWidth: 1140;
 $containerPadding: 40;
 $containerSidePadding: math.div($containerPadding, 2);
 $addPadding: calc($containerWidth + $containerPadding) + px;
 $breakpoint1450: 1449.98 + px;
+$breakpoint1200: 1199.98 + px;
 $breakpoint992: 991.98 + px;
 $breakpoint768: 767.98 + px;
 $breakpoint480: 479.98 + px;
 $burgerBreakpoint: $breakpoint768;
-
-

@@ -10,7 +10,7 @@
   margin: 0 auto;
   
 
-  @media (max-width: calc($addPadding ) ) {
+  @media (max-width: $addPadding ) {
     padding: 0 $containerSidePadding + px;
   }
 

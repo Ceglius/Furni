@@ -1,20 +1,30 @@
-@use '../abstract/vars' as *;
-@use '../abstract/mixins' as *;
+@use "../abstract/vars" as *;
+@use "../abstract/mixins" as *;
 
 /*
    ==== Sections ====
 */
 
 .section {
-
   // .section__title
   &__heading {
-
   }
   // .section__title-subtext
   &__sub-heading {
-
   }
 
+  // .section__hero
+  &__hero {
+    padding-top: rem(90);
+    background-color: var(--green-co);
+    border-top: 1px solid rgba($color: #fff, $alpha: 0.8);
+    overflow: hidden;
+    @media (max-width: $breakpoint992) {
+      padding-top: rem(75);
+    }
 
+    @media (max-width: $breakpoint768) {
+      padding-top: rem(50);
+    }
+  }
 }
