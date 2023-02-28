@@ -37,7 +37,7 @@ const config = {
             options: {
 
               search: "@img",
-              replace: "/assets/images",
+              replace: "./assets/images",
               flags: "g",
             },
           },

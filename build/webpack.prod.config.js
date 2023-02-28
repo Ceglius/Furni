@@ -4,19 +4,19 @@ const { merge } = require("webpack-merge");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const HtmlBeautifierPlugin = require("html-beautifier-webpack-plugin");
+const HtmlMinimizerPlugin = require("html-minimizer-webpack-plugin");
 const glob = require("glob");
 const { PurgeCSSPlugin } = require("purgecss-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
-const ZipPlugin = require('zip-webpack-plugin');
+const ZipPlugin = require("zip-webpack-plugin");
 
 module.exports = merge(common, {
   entry: {
     main: "./src/index.js",
-    
   },
-  
+
   output: {
-    filename: "assets/js/[name].[contenthash:10].js",
+    filename: "./assets/js/[name].[contenthash:10].js",
   },
   mode: "production",
   optimization: {
@@ -158,9 +158,27 @@ module.exports = merge(common, {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "assets/css/[name].[contenthash:10].css",
+      filename: "./assets/css/[name].[contenthash:10].css",
     }),
-    new HtmlBeautifierPlugin(),
+
+    new HtmlMinimizerPlugin({
+      minimizerOptions: {
+        collapseWhitespace: false, // remove white spaces
+        removeComments: true, // remove HTML comments
+      },
+    }),
+    new HtmlBeautifierPlugin({
+      config: {
+        html: {
+          end_with_newline: true,
+          indent_size: 2,
+          indent_with_tabs: true,
+          indent_inner_html: true,
+          preserve_newlines: true,
+          unformatted: ["p", "i", "b", "span"],
+        },
+      },
+    }),
     new PurgeCSSPlugin({
       paths: glob.sync(`${path.join(__dirname, "../src")}/**/*`, {
         nodir: true,

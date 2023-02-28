@@ -15,11 +15,26 @@
   font-size: rem(16);
   border-radius: rem(30); 
   line-height: rem(28);
+  transition: .3s all;
+  
+
+  &:hover {
+    background-color: var(--orange-co);
+  }
+
   @media (max-width: $breakpoint480){
     font-size: rem(14);
     line-height: rem(20);
   }
 
+  &--default {
+    margin-top: rem(30);
+
+    @media (max-width: $breakpoint768){
+      margin-top: rem(20);
+    }
+  }
+  
   &--cta {
     background-color: var(--orange-co);
     border: 2px solid var(--orange-co);
@@ -33,7 +48,7 @@
     }
   }
 
-  &--transparent {
+  &--clear {
     background-color: transparent;
     border: 2px solid rgba(255, 255, 255, 0.29);
     transition: background .3s, border .3s , color .4s;
@@ -44,4 +59,6 @@
       color: var(--black-co);
     }
   }
+
+
 } 
