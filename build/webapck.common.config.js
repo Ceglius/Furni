@@ -1,7 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
-
+const BeautifyHtmlWebpackPlugin = require( '@sumotto/beautify-html-webpack-plugin' );
 const config = {
   entry: {
     main: ["./src/index.js"],
@@ -62,7 +62,7 @@ const config = {
       templateParameters: require("../src/data/data.json"),
       inject: true,
     }),
-
+    new BeautifyHtmlWebpackPlugin(),
     new CopyPlugin({
       patterns: [{ from: "src/images", to: "assets/images" }],
     }),

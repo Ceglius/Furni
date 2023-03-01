@@ -23,6 +23,7 @@
   "devDependencies": {
     "@babel/core": "^7.20.12",
     "@babel/preset-env": "^7.20.2",
+    "@sumotto/beautify-html-webpack-plugin": "^1.0.0",
     "autoprefixer": "^10.4.13",
     "babel-loader": "^9.1.2",
     "clean-webpack-plugin": "^4.0.0",
@@ -38,7 +39,6 @@
     "handlebars-loader": "^1.7.3",
     "html-beautifier-webpack-plugin": "^1.0.6",
     "html-loader": "^4.2.0",
-    "html-minimizer-webpack-plugin": "^4.3.0",
     "html-webpack-plugin": "^5.5.0",
     "image-minimizer-webpack-plugin": "^3.8.1",
     "image-webpack-loader": "^8.1.0",
