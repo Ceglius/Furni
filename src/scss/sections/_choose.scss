@@ -1,0 +1,128 @@
+@use "../abstract/vars" as *;
+@use "../abstract/mixins" as *;
+
+/*
+   ==== Choose ====
+*/
+
+.choose {
+  display: flex;
+  justify-content: space-between;
+  gap: rem(20);
+
+  @media (max-width: $breakpoint992){
+    flex-wrap: wrap;
+  }
+  // .choose__item
+  &__item {
+    &.left__item {
+      flex: 0 1 rem(470);
+      padding-top: rem(60);
+
+      @media (max-width: $breakpoint1200){
+        flex: 0 1 rem(525);
+      }
+
+      @media (max-width: $breakpoint992){
+        flex: 0 1 100%;
+        padding-top: rem(30);
+      }
+    }
+
+    &.right__item {
+      padding-top: rem(50);
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 296px;
+        height: rem(307);
+        left: rem(-310);
+        top: rem(170);
+        background: rgba(53, 115, 110, 0.1);
+        border-radius: rem(20);
+
+        @media (max-width: $breakpoint992){
+          left: unset;
+          right: -50%;
+          top: unset;
+          bottom: 10%;
+          background: rgba(53, 115, 110, 0.3);
+        }
+        @media (max-width: $breakpoint768){
+          right: -3%;
+
+        }
+        @media (max-width: $breakpoint480){
+          width: 180px;
+          height: 200px;
+          right: -2%;
+        }
+      }
+      
+      @media (max-width: $breakpoint992){
+        padding-top: rem(30);
+      }
+
+    }
+  }
+
+  &__svg {
+    position: absolute;
+    left: rem(-80);
+    top: 0;
+    z-index: -1;
+  }
+}
+
+.why {
+  margin-top: rem(80);
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem(40);
+
+  @media (max-width: $breakpoint992){
+    margin-top: rem(35);
+  }
+
+  // .why__item
+  &__item {
+    flex: 0 1 rem(215);
+    @media (max-width: $breakpoint992){
+        flex: 0 1 46%;
+    }
+
+    @media (max-width: $breakpoint768){
+        flex: 0 1 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+  }
+
+  // .why__icon
+  &__icon {
+    max-width: rem(44);
+  }
+
+  // .why__title
+  &__title {
+    font-weight: var(--fw-semi-bold);
+    font-size: rem(14);
+    line-height: rem(22);
+    color: var(--heading-co);
+    margin-top: rem(3);
+    margin-bottom: rem(3);
+  }
+
+  // .why__paragraph
+  &__paragraph {
+    font-size: rem(14);
+    line-height: rem(22);
+
+    @media (max-width: $breakpoint768){
+        text-align: center;
+    }
+  }
+}

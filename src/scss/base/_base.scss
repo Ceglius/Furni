@@ -10,6 +10,7 @@ body {
   font-family: var(--ff-main);
   font-size: var(--fs-body);
   font-weight: var(--fw-regular);
+  color: var(--body-text-co);
 
   &.locked {
     overflow: hidden;

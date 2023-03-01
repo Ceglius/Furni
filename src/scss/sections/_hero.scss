@@ -5,7 +5,9 @@
   ==== Hero ====
 */
 
+
 .hero {
+  margin-top: 100px;
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -87,10 +89,6 @@
     @media (max-width: $breakpoint480) {
       margin-top: rem(30);
     }
-  }
-
-  // .hero__img
-  &__img {
   }
 
   &__svg {
