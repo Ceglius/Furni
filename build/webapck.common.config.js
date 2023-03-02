@@ -57,7 +57,7 @@ const config = {
   plugins: [
     new HtmlWebpackPlugin({
       filename: "index.html",
-      template: path.join(__dirname, "../src/views/index.hbs"),
+      template: path.join(__dirname, "../src/views/pages/index.hbs"),
       minify:  false,
       templateParameters: require("../src/data/data.json"),
       inject: true,

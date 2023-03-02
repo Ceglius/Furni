@@ -4,3 +4,130 @@
 /*
    ==== Design====
 */
+
+.design {
+  display: flex;
+  justify-content: space-between;
+  gap: rem(50);
+  
+  @media (max-width: $breakpoint992){
+   flex-wrap: wrap-reverse;
+  }
+  // .design__item
+  &__item {
+
+    // .left__item
+    &.left__item {
+      position: relative;
+      display: flex;
+      gap: rem(30);
+      align-items: flex-start;
+      flex:1 0 rem(630);
+      justify-content: center;
+      
+        @media (max-width: $breakpoint992){
+          flex: 0 1 100%
+        }
+
+        @media (max-width: $breakpoint480){
+          gap: rem(15);
+        }
+
+    }
+
+    // .right__item
+    &.right__item {
+    }
+  }
+// .design__svg
+  &__svg {
+    position: absolute;
+    top: -15%;
+    left: -15%;
+    z-index: -1;
+    @media (max-width: $breakpoint1200){
+    top: -15%;
+    left: -1%;
+    }
+
+    @media (max-width: $breakpoint992){
+      top: rem(-30);
+      left: -1%;
+      width: 50%;
+    }
+
+    @media (max-width: $breakpoint480){
+      top: rem(-55);
+      left: -1%;
+      width: 50%;
+    }
+  }
+
+  // .design__img
+  &__img {
+
+  }
+
+  // .design__img--1
+  &__img--1 {
+   
+  }
+  // .design__img--2
+  &__img--2 {
+
+  }
+
+  // .design__img--3
+  &__img--3 {
+    
+    position: absolute;
+    right: 0;
+    bottom: rem(-60);
+
+    @media (max-width: 1180px){
+      bottom: rem(-30);
+    }
+    @media (max-width: 1124px){
+      bottom: rem(-25);
+    }
+    @media (max-width: 1100px){
+      bottom: rem(50);
+    }
+    @media (max-width: $breakpoint992){
+      right: 10%;
+      bottom: rem(-70);
+     
+    }
+
+    @media (max-width: $breakpoint560){
+      max-width: 50%;
+      bottom: rem(-50);
+    }
+  }
+
+  // .design__list
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(24);
+    margin-top: rem(30);
+
+    li {
+      position: relative;
+      padding-left: rem(22);
+      font-size: rem(14);
+      line-height: rem(19);
+      flex: 0 1 rem(215);
+      &::after {
+        content: "";
+        position: absolute;
+        border: 2px solid #3b5d50;
+        height: rem(8);
+        width: rem(8);
+        left: rem(8);
+        top: rem(6);
+        border-radius: 100%;
+      }
+    }
+  }
+}

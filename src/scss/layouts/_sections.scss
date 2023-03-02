@@ -6,7 +6,6 @@
 */
 
 .section {
-
   // .section__title
   &__title {
     font-weight: var(--fw-semi-bold);
@@ -63,6 +62,18 @@
   &__choose {
     padding-top: rem(150);
 
+    @media (max-width: $breakpoint992) {
+      padding-top: rem(75);
+    }
+
+    @media (max-width: $breakpoint768) {
+      padding-top: rem(50);
+    }
+  }
+
+  // .section__design
+  &__design {
+    padding-top: rem(150);
     @media (max-width: $breakpoint992) {
       padding-top: rem(75);
     }
