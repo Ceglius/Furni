@@ -4,3 +4,61 @@
 /*
    ==== Examples ====
 */
+
+.examples {
+  // .examples__list
+  &__list {
+    display: flex;
+    gap: rem(50);
+    @include flex-sb-center(20);
+
+    @media (max-width: $breakpoint992){
+      flex-wrap: wrap;
+    }
+  }
+
+  // .examples__item
+  &__item {
+   @include flex-sb-center(30);
+
+   @media (max-width: $breakpoint992){
+      flex: 0 1 100%;
+      justify-content: flex-start;
+    }
+  }
+
+  // .examples__img
+
+  &__img {
+    min-width: rem(92);
+  }
+
+  // .examples__info
+  &__info {
+      @include flex-column(10);
+  }
+
+  // .examples__name
+  &__name {
+    font-weight: 700;
+    font-size: rem(14);
+    color: var(--black-co);
+  }
+
+  // .examples__text
+  &__text {
+    font-size: rem(14);
+  }
+
+  // .examples__link
+  &__link {
+    font-weight: var(--fw-bold);
+    font-size: rem(12);
+    color: var(--silver-co);
+    transition: .3s color ease;
+
+    &:hover  {
+      color: #2f2f2f;
+    }
+  }
+}

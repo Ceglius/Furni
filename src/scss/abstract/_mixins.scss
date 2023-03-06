@@ -6,4 +6,15 @@
 	@return $result;
 }
 
+@mixin flex-column($gap) {
+	display: flex;
+	flex-direction: column;
+	gap: rem($gap);
+}
 
+@mixin flex-sb-center($gap) {
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+	gap: rem($gap);
+}
