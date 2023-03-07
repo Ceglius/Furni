@@ -1,0 +1,95 @@
+@use "../abstract/vars" as *;
+@use "../abstract/mixins" as *;
+
+/*
+   ==== Blog ====
+*/
+
+.blog {
+  // .blog__header
+  &__header {
+    @include flex-sb-center();
+  }
+
+  // .blog__link
+  &__link {
+    font-weight: var(--fw-semi-bold);
+    font-size: rem(16);
+    line-height: rem(18);
+    color: var(--heading-co);
+    border-bottom: 3px solid #000000;
+    transition: all 0.3s ease;
+
+    @media (max-width: $breakpoint768) {
+      border-bottom: 2px solid #000000;
+      font-size: rem(14);
+    }
+    
+    &:hover {
+      border-color: var(--green-co);
+      color: var(--green-co);
+    }
+  }
+
+  // .blog__list
+  &__list {
+    @include flex-sb-center($gap: 30);
+    margin-top: rem(36);
+
+    @media (max-width: $breakpoint992) {
+      @include flex-sb-center($gap: 15);
+    }
+    @media (max-width: $breakpoint768) {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: rem(40);
+    }
+  }
+
+  // .blog__item
+  &__item {
+    flex: 0 1 rem(360);
+    @media (max-width: $breakpoint768) {
+      // flex: 0 1 100%;
+    }
+  }
+
+  // .blog__img
+  &__img {
+    border-radius: rem(10);
+    overflow: hidden;
+  }
+
+  // .blog__info
+  &__info {
+  }
+
+  // .blog__name
+  &__name {
+    margin-bottom: rem(5);
+    margin-top: rem(44);
+    font-size: rem(18);
+    line-height: rem(22);
+    @media (max-width: $breakpoint992) {
+      margin-top: rem(20);
+      font-size: rem(16);
+    }
+  }
+
+  // .blog__author
+  &__author {
+    font-size: rem(14);
+    line-height: rem(17);
+
+    span {
+      font-style: italic;
+      font-weight: var(--fw-regular);
+    }
+  }
+
+  &__name,
+  &__author {
+    color: var(--heading-co);
+    font-weight: var(--fw-semi-bold);
+  }
+}

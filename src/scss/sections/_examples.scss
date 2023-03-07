@@ -10,7 +10,7 @@
   &__list {
     display: flex;
     gap: rem(50);
-    @include flex-sb-center(20);
+    @include flex-sb-center($gap:20);
 
     @media (max-width: $breakpoint992){
       flex-wrap: wrap;
@@ -19,7 +19,7 @@
 
   // .examples__item
   &__item {
-   @include flex-sb-center(30);
+   @include flex-sb-center($gap:30);
 
    @media (max-width: $breakpoint992){
       flex: 0 1 100%;
@@ -35,7 +35,7 @@
 
   // .examples__info
   &__info {
-      @include flex-column(10);
+      @include flex-column($gap:10);
   }
 
   // .examples__name
