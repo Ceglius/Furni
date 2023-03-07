@@ -4,3 +4,124 @@
 /*
    ==== Testimonials ====
 */
+
+.testimonials {
+  &__wrapper {
+    position: relative;
+  }
+
+  // .testimonials__swiper
+  &__swiper {
+    max-width: rem(760);
+    width: 100%;
+    margin: 0 auto;
+    margin-top: rem(45);
+    @media (max-width: $breakpoint992) {
+      margin-top: rem(30);
+    }
+  }
+
+  // .testimonials__slide
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  // .testimonials__text
+  &__text {
+    font-size: rem(18);
+    line-height: rem(32);
+    text-align: center;
+    @media (max-width: $breakpoint992) {
+      font-size: rem(16);
+      line-height: 1.6;
+    }
+  }
+
+  // .testimonials__avatar
+  &__avatar {
+    border-radius: 100%;
+    overflow: hidden;
+    margin-top: rem(42);
+    max-width: rem(77);
+
+    @media (max-width: $breakpoint992) {
+      margin-top: rem(20);
+    }
+  }
+
+  // .testimonials__name
+  &__name {
+    margin-top: rem(13);
+    font-size: rem(18);
+    line-height: rem(32);
+    color: var(--black-co);
+    @media (max-width: $breakpoint992) {
+      margin-top: rem(10);
+    }
+  }
+
+  // .testimonials__position
+  &__position {
+    font-size: rem(13);
+    line-height: rem(32);
+    color: var(--heading-co);
+  }
+}
+
+.swiper-wrapper {
+  padding-bottom: rem(40);
+}
+
+.swiper-pagination {
+  .swiper-pagination-bullet {
+   @include square(7);
+   background: #d9d9d9;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #385d50;
+  }
+}
+
+.slider {
+  // .slider__btn
+  &__btn {
+    @include square(58);
+    position: absolute;
+    top: rem(35);
+    border-radius: 100%;
+    background: #385d50;
+    z-index: 50;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    .slider__btn-path {
+      stroke: #fff;
+    }
+
+    &.swiper-button-disabled {
+      background: rgba(196, 196, 196, 1);
+
+      .slider__btn-path {
+        stroke: #000;
+      }
+    }
+
+    &.prev-btn {
+      left: 0;
+      @media (max-width: $breakpoint992) {
+        top: unset;
+        bottom: rem(-29);
+      }
+    }
+    &.next-btn {
+      right: 0;
+      @media (max-width: $breakpoint992) {
+        top: unset;
+        bottom: rem(-29);
+      }
+    }
+  }
+}

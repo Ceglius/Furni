@@ -4,7 +4,7 @@ const { merge } = require("webpack-merge");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const glob = require("glob");
-const { PurgeCSSPlugin } = require("purgecss-webpack-plugin");
+// const { PurgeCSSPlugin } = require("purgecss-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
 const ZipPlugin = require("zip-webpack-plugin");
@@ -27,6 +27,9 @@ module.exports = merge(common, {
         node_modules: {
           test: /[\\/]node_modules[\\/]/,
           name: "vendors",
+          chunks: 'initial',
+          priority: 10,
+          enforce: true
         },
         // style: {
         //   test: /_libs\.s?css$/,
@@ -160,12 +163,12 @@ module.exports = merge(common, {
       filename: "./assets/css/[name].[contenthash:10].css",
     }),
     
-    new PurgeCSSPlugin({
-      paths: glob.sync(`${path.join(__dirname, "../src")}/**/*`, {
-        nodir: true,
-      }),
-      only: ["vendor"],
-    }),
+    // new PurgeCSSPlugin({
+    //   paths: glob.sync(`${path.join(__dirname, "../src")}/**/*`, {
+    //     nodir: true,
+    //   }),
+    //   only: ["vendor"],
+    // }),
     // new ZipPlugin({
     //   path: '../',
     //   filename: "dist.zip"

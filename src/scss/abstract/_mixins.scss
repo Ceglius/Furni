@@ -18,3 +18,8 @@
     align-items: center;
 	gap: rem($gap);
 }
+
+@mixin square($n) {
+	width: rem($n);
+	height: rem($n);
+}
