@@ -112,4 +112,13 @@
     padding-top: rem(41);
     padding-bottom: rem(150);
   }
+  // .section__subscribe
+  &__subscribe {
+    padding: rem(100) 0 rem(130) 0;
+    background-color: #fff;
+
+    @media (max-width: $breakpoint768) {
+      padding: rem(130) 0 rem(75) 0;
+    }
+  }
 }

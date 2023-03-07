@@ -50,7 +50,7 @@
   &__item {
     flex: 0 1 rem(360);
     @media (max-width: $breakpoint768) {
-      // flex: 0 1 100%;
+      flex: 0 1 rem(450);
     }
   }
 
