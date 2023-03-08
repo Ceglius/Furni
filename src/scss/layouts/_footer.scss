@@ -1,6 +1,170 @@
+@use '../abstract/vars' as *;
+@use '../abstract/mixins' as *;
+
 /*
   ==== Footer ====
 */
-.footer {
+footer {
+  background-color: var(--white-co);
+  padding-bottom: rem(35);
+  padding: rem(150) 0;
+}
 
+.footer {
+  display: flex;
+  gap: rem(65);
+  padding-bottom: rem(32);
+  @media (max-width: $breakpoint992) {
+    gap: rem(30);
+  }
+
+  @media (max-width: $breakpoint768) {
+    flex-wrap: wrap;
+  }
+
+  // .footer__logo
+  &__logo {
+    margin-bottom: rem(20);
+    display: block;
+  }
+
+  // .footer__item
+  &__item {
+    &.right__item {
+      display: flex;
+      gap: rem(50);
+      @media (max-width: $breakpoint992) {
+        gap: rem(30);
+      }
+      @media (max-width: $breakpoint480) {
+        flex: 0 1 100%;
+      }
+      @media (max-width: $breakpoint480) {
+        flex-wrap: wrap;
+      }
+    }
+
+    &.left__item {
+      flex: 0 1 rem(360);
+      @include flex-column($gap: 65);
+
+      @media (max-width: $breakpoint768) {
+        flex: 0 1 100%;
+        gap: rem(20);
+      }
+    }
+  }
+
+  // .footer__text
+  &__text {
+    font-size: rem(14);
+    line-height: rem(24);
+  }
+
+  // .footer__link
+  &__link {
+    color: inherit;
+    display: inline-block;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: var(--green-co);
+    }
+  }
+
+  // .footer__copy
+  &__copy {
+    padding-top: rem(32);
+    border-top: 1px solid #eff2f1;
+  }
+}
+
+.socials {
+  // .social__item
+  display: flex;
+  gap: rem(11);
+
+  &__item {
+   
+    &:hover {
+      a {
+        background: var(--green-co);
+      }
+  }
+}
+
+  // .social__link
+  &__link {
+    display: inline-block;
+    background: #d9d9d9;
+    border-radius: 100%;
+    @include flex-center();
+    @include square(41);
+    transition: 0.3s background;
+
+
+    &:hover {
+      a {
+        background: var(--green-co);
+      }
+
+      path {
+        fill: #fff;
+      }
+    }
+  }
+}
+.links {
+  li:not(:last-child) {
+    margin-bottom: rem(5);
+  }
+
+  @media (max-width: $breakpoint768) {
+    flex: 0 0 20%;
+  }
+
+  @media (max-width: $breakpoint480) {
+    flex: 0 0 45%;
+  }
+}
+
+.copy {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: $breakpoint768){
+    gap: rem(30);
+    flex-wrap: wrap;
+  }
+  // .copy__text
+  &__text {
+    p {
+      font-size: rem(13);
+      line-height: rem(24);
+
+      span {
+        @media (max-width: $breakpoint480){
+          display: block;
+        }
+      }
+    }
+  }
+
+  // .copy__links
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    gap: rem(20);
+    flex: 0 1 rem(265);
+    flex-wrap: wrap;
+
+    a {
+      color: inherit;
+      font-size: rem(14);
+
+      &:hover {
+        color: var(--green-co);
+      }
+    }
+  }
 }
