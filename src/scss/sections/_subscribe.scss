@@ -11,7 +11,7 @@
 
   &__image {
     position: absolute;
-    top: rem(180);
+    top: rem(-180);
     right: 0;
     width: auto;
 
@@ -34,7 +34,6 @@
       font-weight: var(--fw-semi-bold);
       font-size: rem(18);
       line-height: rem(22);
-
       color: var(--heading-co);
     }
   }

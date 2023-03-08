@@ -97,6 +97,10 @@
     cursor: pointer;
     transition: all 0.3s;
 
+    @media (max-width: $breakpoint768){
+      display: none;
+    }
+
     .slider__btn-path {
       stroke: #fff;
     }
@@ -113,14 +117,14 @@
       left: 0;
       @media (max-width: $breakpoint992) {
         top: unset;
-        bottom: rem(-29);
+        bottom: 0;
       }
     }
     &.next-btn {
       right: 0;
       @media (max-width: $breakpoint992) {
         top: unset;
-        bottom: rem(-29);
+        bottom: 0;
       }
     }
   }

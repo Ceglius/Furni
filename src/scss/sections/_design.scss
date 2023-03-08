@@ -12,7 +12,11 @@
   
   @media (max-width: $breakpoint992){
    flex-wrap: wrap-reverse;
+   gap: rem(100);
   }
+  @media (max-width: $breakpoint768){
+    gap: rem(75);
+   }
   // .design__item
   &__item {
 
@@ -61,20 +65,6 @@
       left: -1%;
       width: 50%;
     }
-  }
-
-  // .design__img
-  &__img {
-
-  }
-
-  // .design__img--1
-  &__img--1 {
-   
-  }
-  // .design__img--2
-  &__img--2 {
-
   }
 
   // .design__img--3

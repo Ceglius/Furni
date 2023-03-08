@@ -39,86 +39,84 @@
     border-top: 1px solid rgba($color: #fff, $alpha: 0.8);
     position: relative;
     overflow: hidden;
+    margin-bottom: rem(150);
     @media (max-width: $breakpoint992) {
       padding-top: rem(75);
+      margin-bottom: rem(90);
     }
 
     @media (max-width: $breakpoint768) {
       padding-top: rem(50);
+      margin-bottom: rem(75);
     }
   }
   // .section__crafts
   &__crafts {
-    padding-top: rem(150);
+    padding-bottom: rem(160);
 
     @media (max-width: $breakpoint992) {
-      padding-top: rem(75);
+      padding-bottom: rem(100);
     }
 
     @media (max-width: $breakpoint768) {
-      padding-top: rem(50);
+      padding-bottom: rem(80);
     }
   }
   // .section__choose
   &__choose {
-    padding-top: rem(150);
+    padding-bottom: rem(150);
 
     @media (max-width: $breakpoint992) {
-      padding-top: rem(75);
+      padding-bottom: rem(90);
     }
 
     @media (max-width: $breakpoint768) {
-      padding-top: rem(50);
+      padding-bottom: rem(75);
     }
   }
 
   // .section__design
   &__design {
-    padding-top: rem(150);
+    padding-bottom: rem(219);
     @media (max-width: $breakpoint992) {
-      padding-top: rem(75);
+      padding-bottom: rem(150);
     }
 
     @media (max-width: $breakpoint768) {
-      padding-top: rem(50);
+      padding-bottom: rem(120);
     }
   }
 
   // .section__examples
   &__examples {
-    padding-top: rem(150);
+    padding-bottom: rem(95);
     @media (max-width: $breakpoint992) {
-      padding-top: rem(75);
+      padding-bottom: rem(75);
     }
 
     @media (max-width: $breakpoint768) {
-      padding-top: rem(50);
+      padding-bottom: rem(50);
     }
   }
 
   &__testimonials {
-    padding-top: rem(150);
-    @media (max-width: $breakpoint992) {
-      padding-top: rem(75);
-    }
+    padding-bottom: rem(40);
 
-    @media (max-width: $breakpoint768) {
-      padding-top: rem(50);
-    }
   }
 
   // .section__blog
   &__blog {
-    padding-top: rem(41);
-    padding-bottom: rem(150);
+    padding-bottom: rem(132);
   }
   // .section__subscribe
   &__subscribe {
-    padding: rem(100) 0 rem(130) 0;
+    padding-top: rem(100);
+    padding-bottom: rem(165);
     background-color: #fff;
 
     @media (max-width: $breakpoint768) {
-      padding: rem(130) 0 rem(75) 0;
+      padding-top: rem(130);
+      padding-bottom: rem(100);
     }
   }
 }

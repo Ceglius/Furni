@@ -12,6 +12,7 @@
 
   @media (max-width: $breakpoint992){
     flex-wrap: wrap;
+    gap: rem(90);
   }
   // .choose__item
   &__item {

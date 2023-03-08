@@ -7,7 +7,7 @@
 footer {
   background-color: var(--white-co);
   padding-bottom: rem(35);
-  padding: rem(150) 0;
+  
 }
 
 .footer {
@@ -85,13 +85,12 @@ footer {
   gap: rem(11);
 
   &__item {
-   
     &:hover {
       a {
         background: var(--green-co);
       }
+    }
   }
-}
 
   // .social__link
   &__link {
@@ -101,7 +100,6 @@ footer {
     @include flex-center();
     @include square(41);
     transition: 0.3s background;
-
 
     &:hover {
       a {
@@ -132,7 +130,7 @@ footer {
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: $breakpoint768){
+  @media (max-width: $breakpoint768) {
     gap: rem(30);
     flex-wrap: wrap;
   }
@@ -143,7 +141,7 @@ footer {
       line-height: rem(24);
 
       span {
-        @media (max-width: $breakpoint480){
+        @media (max-width: $breakpoint480) {
           display: block;
         }
       }
