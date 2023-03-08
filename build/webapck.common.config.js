@@ -1,7 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
-const BeautifyHtmlWebpackPlugin = require( '@sumotto/beautify-html-webpack-plugin' );
+const BeautifyHtmlWebpackPlugin = require("@sumotto/beautify-html-webpack-plugin");
 const config = {
   entry: {
     main: ["./src/index.js"],
@@ -11,9 +11,7 @@ const config = {
     path: path.resolve(__dirname, "../dist"),
     clean: true,
   },
-  optimization: {
-    usedExports: true,
-  },
+
   module: {
     rules: [
       {
@@ -30,12 +28,11 @@ const config = {
                   "./src/views/layouts"
                 ),
               ],
-            }
+            },
           },
           {
             loader: "string-replace-loader",
             options: {
-
               search: "@img",
               replace: "./assets/images",
               flags: "g",
@@ -51,7 +48,10 @@ const config = {
         },
       },
 
-   
+      {
+        test: /swiper\.esm\.js/,
+        sideEffects: false,
+      },
     ],
   },
 

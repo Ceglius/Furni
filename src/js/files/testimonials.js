@@ -18,23 +18,4 @@ const swiper = new Swiper('.testimonials__swiper', {
     nextEl: '.next-btn',
     prevEl: '.prev-btn',
   },
-
-  // And if we need scrollbar
-  // scrollbar: {
-  //   el: '.swiper-scrollbar',
-  // },
-
-//     // Responsive breakpoints
-//     breakpoints: {
-//     // when window width is >= 320px
-//     320: {
-//       slidesPerView: 3,
-//       spaceBetween: 20
-//     },
-//     // when window width is >= 480px
-//     480: {
-//       slidesPerView: 3,
-//       spaceBetween: 30
-//     },
-//   }
 });

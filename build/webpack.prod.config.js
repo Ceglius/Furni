@@ -4,7 +4,7 @@ const { merge } = require("webpack-merge");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const glob = require("glob");
-// const { PurgeCSSPlugin } = require("purgecss-webpack-plugin");
+const { PurgeCSSPlugin } = require("purgecss-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
 const ZipPlugin = require("zip-webpack-plugin");
@@ -19,6 +19,7 @@ module.exports = merge(common, {
   },
   mode: "production",
   optimization: {
+    
     splitChunks: {
       chunks: "all",
       maxSize: Infinity,
@@ -27,9 +28,9 @@ module.exports = merge(common, {
         node_modules: {
           test: /[\\/]node_modules[\\/]/,
           name: "vendors",
-          chunks: 'initial',
+          chunks: "initial",
           priority: 10,
-          enforce: true
+          enforce: true,
         },
         // style: {
         //   test: /_libs\.s?css$/,
@@ -109,6 +110,7 @@ module.exports = merge(common, {
         // ],
       }),
     ],
+    usedExports: true,
   },
   module: {
     rules: [
@@ -151,7 +153,10 @@ module.exports = merge(common, {
         },
         generator: {
           filename: (name) => {
-            const path = name.filename.split("/").slice(1, -1).join("/");
+            const path = name.filename
+              .split("/")
+              .slice(1, -1)
+              .join("/");
             return `${path}/[name].[contenthash:10][ext]`;
           },
         },
@@ -162,13 +167,32 @@ module.exports = merge(common, {
     new MiniCssExtractPlugin({
       filename: "./assets/css/[name].[contenthash:10].css",
     }),
-    
-    // new PurgeCSSPlugin({
-    //   paths: glob.sync(`${path.join(__dirname, "../src")}/**/*`, {
-    //     nodir: true,
-    //   }),
-    //   only: ["vendor"],
-    // }),
+
+    new PurgeCSSPlugin({
+      safelist: [
+        "swiper",
+        "swiper-initialized",
+        "swiper-horizontal",
+        "swiper-pointer-events",
+        "swiper-backface-hidden",
+        "swiper-wrapper",
+        "swiper-slide",
+        "swiper-slide-active",
+        "swiper-slide-next",
+        "swiper-slide-prev",
+        "swiper-pagination",
+        "swiper-pagination-clickable",
+        "swiper-pagination-bullets",
+        "swiper-pagination-horizontal",
+        "swiper-button-disabled",
+        "swiper-pagination-bullet",
+        "swiper-pagination-bullet-active"
+      ],
+      paths: glob.sync(`${path.join(__dirname, "../src")}/**/*`, {
+        nodir: true,
+      }),
+      only: ["vendor"],
+    }),
     // new ZipPlugin({
     //   path: '../',
     //   filename: "dist.zip"
